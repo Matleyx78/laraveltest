@@ -19,12 +19,9 @@
 			Dopo essere stati aggiunto ad un nuovo gruppo, l&#39;utente deve fare il logout e quindi di nuovo il login affinch&eacute; l&#39;impostazione del nuovo gruppo abbia effetto. I gruppi vengono assegnati agli utenti solamente al momento del login. Una della maggiori fonti di confusione viene proprio dal fatto che gli utenti si aggiungono ad un gruppo, ma poi non fanno il logout e di nuovo il login e poi hanno problemi perch&eacute; non sono ancora stati assegnati ad un gruppo. Si pu&ograve; controllare di quali gruppi si fa parte usando i comandi <tt>id</tt> o <tt>groups</tt>.</p>
 		<p>
 			&nbsp;</p>
-		<h2>
-			Modifica del file <em>/etc/apt/source.list</em></h2>
-		<p>
-			Effetuare la modifica del file <em>/etc/apt/source.list</em> con il comando:</p>
-		<div class="code">
-			<code>$ sudo nano /etc/apt/source.list </code></div>
+		<h2>Modifica del file <em>/etc/apt/source.list</em></h2>
+		<p>Effetuare la modifica del file <em>/etc/apt/source.list</em> con il comando:</p>
+		<div class="code"><code>$ sudo nano /etc/apt/source.list </code></div>
 		<p>
 			Alle righe attive, aggiungere i repo <em>contrib</em> e <em>non-free</em>, in modo che le righe attive passino da cos&igrave;:</p>
 		<div class="code">
