@@ -32,3 +32,61 @@
 		<p> Eseguire il seguente comando per aggiornare le liste pacchetti:</p>
 				<div class="code">
 			<code>sudo apt-get update</code></div>
+<h2>
+			Configurare l&#39;interfaccia di rete, se abbiamo bisogno di un ip statico:</h2>
+		<p>
+			Per tale motivo modifichiamo il file <em>/etc/network/interfaces</em> tramite il comando:</p>
+		<div class="code">
+			<code>$ sudo nano /etc/network/interfaces </code></div>
+		<p>
+			e, posto che la nostra rete sia collegata ad un router con IP 192.168.0.1, rendiamolo simile al seguente:</p>
+		<div class="code">
+			<code># This file describes the network interfaces available on your system<br />
+			# and how to activate them. For more information, see interfaces(5).<br />
+			# The loopback network interface<br />
+			auto lo<br />
+			iface lo inet loopback<br />
+			# The primary network interface auto eth0<br />
+			iface eth0 inet static<br />
+			address 192.168.0.100<br />
+			netmask 255.255.255.0<br />
+			network 192.168.0.0<br />
+			broadcast 192.168.0.255<br />
+			gateway 192.168.0.1<br />
+			</code></div>
+		<p>
+			In questo caso, l&#39;interfaccia di rete utilizzata &egrave; eth0 e l&#39;IP assegnato &egrave; 192.168.0.100. Per conoscere le interfacce di rete presenti sulla propria macchina &egrave; possibile utilizzare il comando <tt>ifconfig</tt>, che fornir&agrave; un elenco di tutte quelle collegate ed attive. L&#39;IP pu&ograve; essere scelto a piacere, purch&eacute; sia del tipo 192.168.0.X, dove X &egrave; un numero compreso tra 2 e 254.</p>
+		<p>
+			Andiamo adesso a modificare il file <em>/etc/hosts</em> per far s&igrave; che la macchina riconosca l&#39;indirizzo IP scelto:</p>
+		<div class="code">
+			<code>$ sudo nano /etc/hosts </code></div>
+		<p>
+			e aggiungiamo la riga</p>
+		<div class="code">
+			<code>192.168.0.100 ubuntu </code></div>
+		<p>
+			utilizzando lo stesso IP scelto prima, e dove <em>ubuntu</em> &egrave; il nome di host che abbiamo assegnato alla macchina durante la fase di installazione, reperibile anche tramite il comando</p>
+		<div class="code">
+			<code>$ cat /etc/hostname </code></div>
+		<p>
+			Passiamo alla configurazione dei server DNS, tramite la modifica del file <em>/etc/resolv.conf</em>:</p>
+		<div class="code">
+			<code>$ sudo nano /etc/resolv.conf </code></div>
+		<p>
+			Una scelta universale &egrave; quella di utilizzare il servizio gratuito offerto da OpenDNS, aggiungendo a tale file le seguenti righe:</p>
+		<div class="code">
+			<code># OpenDNS<br />
+			nameserver 208.67.220.220<br />
+			nameserver 208.67.222.222 </code></div>
+		<p>
+			Riavviamo la macchina tramite il comando</p>
+		<div class="code">
+			<code>$ sudo reboot </code></div>
+		<p>
+			e testiamo la connessione &ldquo;pingando&rdquo; un sito web a piacere, ad esempio</p>
+		<div class="code">
+			<code>$ ping www.google.it </code></div>
+		<p>
+			Nel caso in cui tutto sia stato configurato in maniera corretta, si ricever&agrave; una risposta ai pacchetti inviati tramite ping, segno che la connessione funziona, altrimenti &egrave; necessario riconfigurare i parametri di rete e correggere eventuali errori commessi.</p>
+		<p>
+			&nbsp;</p>
