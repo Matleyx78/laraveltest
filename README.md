@@ -29,9 +29,9 @@
 			Alle righe attive, aggiungere i repo <em>contrib</em> e <em>non-free</em>, in modo che le righe attive passino da cos&igrave;:</p>
 		<div class="code">
 			<code>deb http://ftp.it.debian.org/debian/ wheezy main </code></div>
-		<p>
-			a cos&igrave;:</p>
+		<p>			a cos&igrave;:</p>
 		<div class="code">
 			<code>deb http://ftp.it.debian.org/debian/ wheezy main contrib non-free </code></div>
-		<p>
-			&nbsp;</p>
+		<p> Eseguire il seguente comando per aggiornare le liste pacchetti:</p>
+				<div class="code">
+			<code>sudo apt-get update</code></div>
