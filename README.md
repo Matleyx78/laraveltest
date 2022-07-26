@@ -95,6 +95,14 @@
 			 composer create-project laravel/laravel nomeapp
 			 cd ./nomeapp
 			 sudo chmod -R 777 ./storage/
+			 edit env file (database)
+			 setting /app/config/app.php (name, debug_mode, locale, ecc)
+			 php artisan migrate
+			 composer require laravel/breeze --dev
+			 php artisan breeze:install 
+			npm install
+			npm run dev
+			php artisan migrate
 			 
 			 
 
