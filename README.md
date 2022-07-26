@@ -90,3 +90,11 @@
 			Nel caso in cui tutto sia stato configurato in maniera corretta, si ricever&agrave; una risposta ai pacchetti inviati tramite ping, segno che la connessione funziona, altrimenti &egrave; necessario riconfigurare i parametri di rete e correggere eventuali errori commessi.</p>
 		<p>
 			&nbsp;</p>
+			
+			
+			 composer create-project laravel/laravel nomeapp
+			 cd ./nomeapp
+			 sudo chmod -R 777 ./storage/
+			 
+			 
+
