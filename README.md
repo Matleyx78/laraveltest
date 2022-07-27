@@ -91,14 +91,14 @@
 		<p>
 			&nbsp;</p>
 			
-			
-			 composer create-project laravel/laravel nomeapp (laravel/laravel:9.19)
+			installare php8.x
+			 composer create-project laravel/laravel nomeapp
 			 cd ./nomeapp
 			 sudo chmod -R 777 ./storage/
 			 edit env file (database)
 			 setting /app/config/app.php (name, debug_mode, locale, ecc)
 			 php artisan migrate
-			 composer require laravel/breeze --dev (composer require laravel/breeze:1.9.4)
+			 composer require laravel/breeze --dev (composer require laravel/breeze:1.9.4 se con laravel 8 e php 7)
 			 php artisan breeze:install 
 			npm install
 			npm run dev
