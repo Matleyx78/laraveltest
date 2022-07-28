@@ -92,6 +92,8 @@
 			&nbsp;</p>
 			
 			installare php8.x
+			curl -fsSL https://deb.nodesource.com/setup_18.x | sudo bash -
+			sudo apt-get install -y nodejs
 			 composer create-project laravel/laravel nomeapp
 			 cd ./nomeapp
 			 sudo chmod -R 777 ./storage/
