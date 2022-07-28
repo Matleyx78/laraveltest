@@ -94,6 +94,8 @@
 			installare php8.x
 			curl -fsSL https://deb.nodesource.com/setup_18.x | sudo bash -
 			sudo apt-get install -y nodejs
+			echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+			sudo sysctl -p
 			 composer create-project laravel/laravel nomeapp
 			 cd ./nomeapp
 			 sudo chmod -R 777 ./storage/
