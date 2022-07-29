@@ -137,6 +137,9 @@ sudo apt-get install -y nodejs
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 
+wget -O composer-setup.php https://getcomposer.org/installer
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
 composer create-project laravel/laravel nomeapp
 cd ./nomeapp
 sudo chmod -R 777 ./storage/
