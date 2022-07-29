@@ -90,13 +90,16 @@
 			Nel caso in cui tutto sia stato configurato in maniera corretta, si ricever&agrave; una risposta ai pacchetti inviati tramite ping, segno che la connessione funziona, altrimenti &egrave; necessario riconfigurare i parametri di rete e correggere eventuali errori commessi.</p>
 		<p>
 			&nbsp;</p>
-			
+<div class="code">
+			<code>			
 			address 192.168.1.52
 netmask 255.255.255.0
 gateway 192.168.1.21
-dns-nameservers 8.8.4.4 8.8.8.8
-sudo apt-get install apache2
-sudo apt-get install samba cifs-utils
+dns-nameservers 8.8.4.4 8.8.8.8</code></div>
+<div class="code">
+			<code>sudo apt-get install apache2</code></div>
+<div class="code">
+			<code>sudo apt-get install samba cifs-utils
 [global]
 workgroup = GRUPPODILAVORO
 server string = DESCRIZIONE
@@ -112,7 +115,7 @@ read only = no
 guest ok = yes
 guest only = yes
 create mask = 0777
-directory mask = 0777
+directory mask = 0777</code></div>
 php8
 sudo apt update
 sudo apt install -y lsb-release ca-certificates apt-transport-https software-properties-common gnupg2
