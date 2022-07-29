@@ -91,6 +91,35 @@
 		<p>
 			&nbsp;</p>
 			
+			address 192.168.1.52
+netmask 255.255.255.0
+gateway 192.168.1.21
+dns-nameservers 8.8.4.4 8.8.8.8
+sudo apt-get install apache2
+sudo apt-get install samba cifs-utils
+[global]
+workgroup = GRUPPODILAVORO
+server string = DESCRIZIONE
+allow hosts = 192.168.1.0/24
+wins support = yes
+security = share
+share modes = yes
+encrypt passwords = no
+[nomecondivisione]
+comment = commento_condivisione
+path = /path/da/condividere/ESEMPIO
+read only = no
+guest ok = yes
+guest only = yes
+create mask = 0777
+directory mask = 0777
+php8
+sudo apt update
+sudo apt install -y lsb-release ca-certificates apt-transport-https software-properties-common gnupg2
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/sury-php.list
+wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+sudo apt update 
+sudo apt install php8.0 php8.0-mysql php8.0-dba php8.0-imap php8.0-readline php8.0-bz2 php8.0-odbc php8.0-dev php8.0-xml php8.0-cgi php8.0-intl php8.0-xsl php8.0-cli php8.0-pgsql php8.0-zip php8.0-ldap php8.0-sqlite3 php8.0-common php8.0-gd php8.0-phpdbg php8.0-mbstring php8.0-curl
 			installare php8.x
 			curl -fsSL https://deb.nodesource.com/setup_18.x | sudo bash -
 			sudo apt-get install -y nodejs
