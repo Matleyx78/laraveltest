@@ -121,6 +121,7 @@
     <code>sudo apt update</code></div>
 <div class="code">
     <code>sudo apt install -y lsb-release ca-certificates apt-transport-https software-properties-common gnupg2<br />
+        <br />
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/sury-php.list<br />
 wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -<br />
 sudo apt update </code></div>
