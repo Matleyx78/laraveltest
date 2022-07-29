@@ -128,12 +128,15 @@ sudo apt update </code></div>
 <div class="code">
     <code>sudo apt install php libapache2-mod-php php8.1-mysql php8.1-common php8.1-mysql php8.1-xml php8.1-xmlrpc php8.1-curl php8.1-gd php8.1-imagick php8.1-cli php8.1-dev php8.1-imap php8.1-mbstring php8.1-opcache php8.1-soap php8.1-zip php8.1-intl -y
 installare php8.x</code></div>
+sudo apt-get install -y composer
 sudo apt install mariadb-server
 sudo mysql_secure_installation 
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo bash -
+
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo bash -
 sudo apt-get install -y nodejs
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
+
 composer create-project laravel/laravel nomeapp
 cd ./nomeapp
 sudo chmod -R 777 ./storage/
