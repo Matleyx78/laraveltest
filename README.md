@@ -141,14 +141,10 @@ wget -O composer-setup.php https://getcomposer.org/installer
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer<br />
 <br />
 composer create-project laravel/laravel nomeapp<br />
+mv env file to app directory<br />
 cd ./nomeapp<br />
+php artisan key:generate<br />
 sudo chmod -R 777 ./storage/<br />
-edit env file (database)<br />
 setting /app/config/app.php (name, debug_mode, locale, ecc)<br />
-php artisan migrate<br />
-composer require laravel/breeze --dev (composer require laravel/breeze:1.9.4 se con laravel 8 e php 7)<br />
-php artisan breeze:install <br />
-npm install<br />
-npm run dev<br />
 php artisan migrate<br />
 
