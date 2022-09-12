@@ -138,7 +138,7 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 
 wget -O composer-setup.php https://getcomposer.org/installer
-sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer<br />
 <br />
 composer create-project laravel/laravel nomeapp<br />
 cd ./nomeapp<br />
@@ -151,20 +151,4 @@ php artisan breeze:install <br />
 npm install<br />
 npm run dev<br />
 php artisan migrate<br />
-<br />
-
-wget -O composer-setup.php https://getcomposer.org/installer
-sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-
-composer create-project laravel/laravel nomeapp
-cd ./nomeapp
-sudo chmod -R 777 ./storage/
-edit env file (database)
-setting /app/config/app.php (name, debug_mode, locale, ecc)
-php artisan migrate
-composer require laravel/breeze --dev (composer require laravel/breeze:1.9.4 se con laravel 8 e php 7)
-php artisan breeze:install 
-npm install
-npm run dev
-php artisan migrate
 
